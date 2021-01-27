@@ -2,10 +2,10 @@
 import os
 
 import discord
-from dotenv import load_dotenv
 
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+with open('token.txt', 'r') as file:
+    TOKEN = file.read().replace('\n', '')
+
 
 client = discord.Client()
 
