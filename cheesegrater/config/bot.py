@@ -5,7 +5,8 @@ import discord
 
 with open('token.txt', 'r') as file:
     TOKEN = file.read().replace('\n', '')
-
+with open('server.txt', 'r') as file:
+    SERVERNAME = file.read().replace('')
 
 client = discord.Client()
 
