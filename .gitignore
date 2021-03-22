@@ -1,3 +1,4 @@
 cheesegrater/config/token.txt
 cheesegrater/config/server.txt
 .env
+cheesegrater/config/__pycache__
