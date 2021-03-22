@@ -1,4 +1,2 @@
-cheesegrater/config/token.txt
-cheesegrater/config/server.txt
 .env
-discordbot/cheesegrater/config/__pycache__
+__pycache__
