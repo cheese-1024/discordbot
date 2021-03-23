@@ -1,24 +1,24 @@
 import discord
 import os
 import sys
+from assets.assets import *
 from discord.ext import commands
 from discord.ext.commands.core import command    
 from discord.ext.commands import *
 from dotenv import load_dotenv
-import bcolors
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
     OKGREEN = '\033[92m'
-    WARNING = '\033[93m'
+    WARNING = '\033[93m' 
     FAIL = '\033[91m'
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     ITALIC = '\033[3m'
 load_dotenv()
-trusted = ["674332158973706261"]
 
 
 bot = commands.Bot(command_prefix=(os.getenv("PREFIX")))
@@ -35,7 +35,7 @@ Logged in as {bcolors.OKCYAN}{bot.user.name}{bcolors.OKBLUE}, with the ID {bcolo
 @bot.command(help="returns the arguments")
 async def echo(ctx, *, arg):
     id =  ctx.author.id
-    if id == 674332158973706261:
+    if id in trusted:
         await ctx.send(arg)
     else:
         await ctx.message.add_reaction("🔐")
